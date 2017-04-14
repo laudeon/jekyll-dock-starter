@@ -1,8 +1,13 @@
+# laudeon, 2017
+# MIT Licensed
+
 version: "2"
 services:
   web:
-    build: .
+    image: jekyll/jekyll # Official default jekyll docker image
+    # Add ':pages' at the end of the image name if you want to use Github pages
+    command: jekyll serve --watch --incremental # Command to execut in the container
     volumes:
-      - ./:/src
+      - .:/srv/jekyll # map the current directory to /srv/jekyll/
     ports:
-      - "4000:4000"
+      - "4000:4000" # forwards port 4000 of the container to your local port 4000

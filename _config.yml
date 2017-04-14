@@ -1,3 +1,7 @@
+# laudeon, 2017
+# MIT Licensed
+
+# Global variables. Accessing to those vars via 'site.x'
 title: Your awesome title
 author: GitHub User
 email: your-email@domain.com
